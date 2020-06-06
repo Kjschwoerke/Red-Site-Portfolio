@@ -7,16 +7,29 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   line-height: 1.5;
-  color: #15181a;
-  background: #f8f8f8;
+  color: #f8f8f8;
+  background: #15181a;
+  background: #15181a;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left bottom, left top, from(#15181a), to(#070707));
+  background: linear-gradient(0deg, #15181a 0%, #070707 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15181a', endColorstr='#070707',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   font-family: "Montserrat", sans-serif;
 }
 
 header {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  background: #15181a;
   text-align: center;
 }
 
@@ -26,13 +39,6 @@ header {
 }
 
 .splash-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: 0px;
   overflow: hidden;
   margin: 0px auto;
@@ -51,6 +57,7 @@ p {
   color: #f8f8f8;
   width: 0px;
   margin: 0px auto;
+  font-family: "Roboto Slab", serif;
   font-size: 2rem;
   font-weight: 400;
   overflow: hidden;
@@ -135,7 +142,7 @@ p {
 .scroll-icon-container {
   height: auto;
   width: 75px;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 .scroll-icon-container .scroll-arrow {
@@ -265,7 +272,7 @@ p {
     color: transparent;
   }
   100% {
-    color: #575757;
+    color: #f8f8f8;
   }
 }
 
@@ -274,7 +281,142 @@ p {
     color: transparent;
   }
   100% {
-    color: #575757;
+    color: #f8f8f8;
   }
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+  }
+  .logo {
+    margin-top: 2em;
+    height: 45%;
+  }
+  .splash-title {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  @-webkit-keyframes name-type {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 305px;
+    }
+  }
+  @keyframes name-type {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 305px;
+    }
+  }
+  @-webkit-keyframes sub-title-type {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 310px;
+    }
+  }
+  @keyframes sub-title-type {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 310px;
+    }
+  }
+  .scroll-icon-container {
+    height: 100px;
+    width: 75px;
+    margin: 9em auto 0;
+    padding-left: 1em;
+    padding-top: 1em;
+  }
+  .scroll-icon-container .scroll-arrow {
+    height: 25px;
+    width: 25px;
+    background: transparent;
+    margin-top: 0px;
+  }
+  .scroll-icon-container span {
+    position: relative;
+    bottom: 67px;
+    left: 2px;
+    font-size: .5rem;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: transparent;
+    -webkit-animation: fade-in .75s ease-in 8.5s forwards;
+            animation: fade-in .75s ease-in 8.5s forwards;
+  }
+}
+
+main {
+  background: #15181a;
+}
+
+nav {
+  font-family: "Montserrat", sans-serif;
+  padding: 1em;
+  background: #a42b31;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 2.25rem;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 0.5em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-style: none;
+  font-weight: 400;
+  padding: .25em;
+  border: solid transparent 2px;
+  color: #f8f8f8;
+  background: transparent;
+  -webkit-transition: color 0.75s , background 0.75s, border 0.75s;
+  transition: color 0.75s , background 0.75s, border 0.75s;
+}
+
+nav ul li a:hover {
+  color: #15181a;
+  border: solid #15181a 2px;
+  background: #cc6666;
+  -webkit-transition: color 0.75s , background 0.75s, border 0.75s;
+  transition: color 0.75s , background 0.75s, border 0.75s;
+}
+
+#about-me {
+  background: #15181a;
+}
+
+#about-me h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
 }
 /*# sourceMappingURL=style.css.map */

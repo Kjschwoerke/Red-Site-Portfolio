@@ -8,8 +8,8 @@ $light-grey: #575757;
 $dark-grey: #15181a;
 //---------------------------------------------------------------------
 //Variables for fonts:
-$body-text:'Montserrat', sans-serif;
-$divider-text:'Metal Mania', cursive;
+$prime-text:'Montserrat', sans-serif;
+$sub-text:'Roboto Slab', serif;
 //---------------------------------------------------------------------
 * {
     margin: 0;
@@ -19,16 +19,28 @@ $divider-text:'Metal Mania', cursive;
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
     line-height: 1.5;
-    color: $dark-grey;
-    background: $white;
-    font-family: $body-text;
+    color: $white;
+    background: $dark-grey;
+    background: #15181a; /* Old browsers */
+    background: -moz-linear-gradient(0deg, #15181a 0%, #070707 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(0deg, #15181a 0%,#070707 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(0deg, #15181a 0%,#070707 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15181a', endColorstr='#070707',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    font-family: $prime-text;
 }
 
 header {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
     height: 100vh;
-    width: 100vw;
-    background: $dark-grey;
+    width: 100%;
+    // background: $dark-grey;
     text-align: center;
 }
 
@@ -38,14 +50,12 @@ header {
 }
 
 .splash-title {
-    display: flex;
-    flex-direction: column;
     width: 0px;
     overflow: hidden;
     margin: 0px auto;
     color: $red;
     font-size: 3.5rem;
-    font-family: $body-text;
+    font-family: $prime-text;
     font-weight: 700;
     overflow: hidden;
     white-space: nowrap;
@@ -59,6 +69,7 @@ p {
     color: $white;
     width: 0px;
     margin: 0px auto;
+    font-family: $sub-text;
     font-size: 2rem;
     font-weight: 400;
     overflow: hidden;
@@ -113,7 +124,7 @@ p {
 .scroll-icon-container {
     height: auto;
     width: 75px;
-    margin: 0 auto;
+    margin: 1em auto;
 
         .scroll-arrow {
             height: 50px;
@@ -196,6 +207,131 @@ p {
         color: transparent;
     }
     100%{
-        color: $light-grey;
+        color: $white;
+    }
+}
+
+//---------------------------------------------------------------------
+// Media Queries:
+//---------------------------------------------------------------------
+
+@media only screen and (max-width: 700px) {
+    header {
+        
+        justify-content: flex-end;
+        align-content: flex-end;
+    }
+    
+    .logo {
+        margin-top: 2em;
+        height: 45%;
+    }
+
+    .splash-title {
+        font-size: 1.75rem; 
+    }
+    
+    p {
+        font-size: 1.25rem;
+       }
+
+       @keyframes name-type {
+        from {
+            width: 0px;
+        }
+        to {
+            width: 305px;
+        }
+    }
+    
+    
+    @keyframes sub-title-type {
+        from {
+            width: 0px;
+        }
+        to {
+            width: 310px;
+        }
+    }
+
+    .scroll-icon-container {
+        height: 100px;
+        width: 75px;
+        margin: 9em auto 0;
+        padding-left: 1em;
+        padding-top: 1em;
+    
+            .scroll-arrow {
+                height: 25px;
+                width: 25px;
+                background: transparent;
+                margin-top: 0px;
+            }
+    
+            span {
+                position: relative;
+                bottom: 67px;
+                left: 2px;
+                font-size: .5rem;
+                writing-mode: vertical-rl;
+                text-orientation: upright;  
+                color: transparent;
+                animation: fade-in .75s ease-in 8.5s forwards;
+            }
+    }
+    
+    
+  }
+
+//---------------------------------------------------------------------
+// Main CSS:
+//---------------------------------------------------------------------
+
+main{
+    background: $dark-grey;
+}
+
+nav {
+    font-family: $prime-text;
+    padding: 1em;
+    background: $red;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 2.25rem;
+
+        li{
+            list-style: none;
+            margin: 0 0.5em;
+            
+            a{
+                text-decoration: none;
+                font-style: none;
+                font-weight: 400;
+                padding: .25em;
+                border: solid transparent 2px;
+                color: $white;
+                background: transparent;
+                transition: color 0.75s , background 0.75s, border 0.75s;
+            }
+            a:hover{
+                color: $dark-grey;
+                border: solid $dark-grey 2px;
+                background: $light-red;
+                transition: color 0.75s , background 0.75s, border 0.75s;
+            }
+        }
+    }
+}
+
+
+#about-me {
+    background: $dark-grey;
+
+    h2 {
+        font-family: $sub-text;
+        font-weight: 300;
     }
 }
