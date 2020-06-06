@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  color: #15181a;
+  background: #f8f8f8;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  height: 100%;
+  width: 100%;
+  background: #15181a;
+  text-align: center;
+}
+
+.logo {
+  height: 65%;
+  width: auto;
+}
+
+.splash-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 0px;
+  overflow: hidden;
+  margin: 0px auto;
+  color: #a42b31;
+  font-size: 3.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: name-type 3s steps(30, end) 1s forwards, cursor 0.5s step-end 10;
+          animation: name-type 3s steps(30, end) 1s forwards, cursor 0.5s step-end 10;
+  border-right: 5px solid transparent;
+}
+
+p {
+  color: #f8f8f8;
+  width: 0px;
+  margin: 0px auto;
+  font-size: 2rem;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: sub-title-type 3s steps(30, end) 5s forwards, sub-cursor 0.5s step-end 7 5s;
+          animation: sub-title-type 3s steps(30, end) 5s forwards, sub-cursor 0.5s step-end 7 5s;
+  border-right: 5px solid transparent;
+}
+
+@-webkit-keyframes name-type {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 600px;
+  }
+}
+
+@keyframes name-type {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 600px;
+  }
+}
+
+@-webkit-keyframes cursor {
+  from, to {
+    border-right: solid 5px transparent;
+  }
+  50% {
+    border-right: solid 5px #a42b31;
+  }
+}
+
+@keyframes cursor {
+  from, to {
+    border-right: solid 5px transparent;
+  }
+  50% {
+    border-right: solid 5px #a42b31;
+  }
+}
+
+@-webkit-keyframes sub-title-type {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 480px;
+  }
+}
+
+@keyframes sub-title-type {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 480px;
+  }
+}
+
+@-webkit-keyframes sub-cursor {
+  from, to {
+    border-right: solid 5px transparent;
+  }
+  50% {
+    border-right: solid 5px #f8f8f8;
+  }
+}
+
+@keyframes sub-cursor {
+  from, to {
+    border-right: solid 5px transparent;
+  }
+  50% {
+    border-right: solid 5px #f8f8f8;
+  }
+}
+
+.scroll-icon-container {
+  height: auto;
+  width: 75px;
+  margin: 0 auto;
+}
+
+.scroll-icon-container .scroll-arrow {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  margin-top: 0px;
+}
+
+.scroll-icon-container span {
+  position: relative;
+  bottom: 135px;
+  left: 25px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: transparent;
+  -webkit-animation: fade-in .75s ease-in 8.5s forwards;
+          animation: fade-in .75s ease-in 8.5s forwards;
+}
+
+.arrow-01 {
+  fill: #ffcccc;
+  -webkit-animation: arrow1 1s ease-in infinite 8.5s;
+          animation: arrow1 1s ease-in infinite 8.5s;
+}
+
+.arrow-02 {
+  fill: #ffcccc;
+  -webkit-animation: arrow2 1s ease-in infinite 8.5s;
+          animation: arrow2 1s ease-in infinite 8.5s;
+}
+
+.arrow-03 {
+  fill: #ffcccc;
+  -webkit-animation: arrow3 1s ease-in infinite 8.5s;
+          animation: arrow3 1s ease-in infinite 8.5s;
+}
+
+@-webkit-keyframes arrow1 {
+  0% {
+    fill: #ffcccc;
+  }
+  20% {
+    fill: #a42b31;
+  }
+  50% {
+    fill: #ffcccc;
+  }
+  100% {
+    fill: #ffcccc;
+  }
+}
+
+@keyframes arrow1 {
+  0% {
+    fill: #ffcccc;
+  }
+  20% {
+    fill: #a42b31;
+  }
+  50% {
+    fill: #ffcccc;
+  }
+  100% {
+    fill: #ffcccc;
+  }
+}
+
+@-webkit-keyframes arrow2 {
+  0% {
+    fill: #ffcccc;
+  }
+  50% {
+    fill: #a42b31;
+  }
+  100% {
+    fill: #ffcccc;
+  }
+}
+
+@keyframes arrow2 {
+  0% {
+    fill: #ffcccc;
+  }
+  50% {
+    fill: #a42b31;
+  }
+  100% {
+    fill: #ffcccc;
+  }
+}
+
+@-webkit-keyframes arrow3 {
+  0% {
+    fill: #ffcccc;
+  }
+  50% {
+    fill: #ffcccc;
+  }
+  80% {
+    fill: #a42b31;
+  }
+  100% {
+    fill: #ffcccc;
+  }
+}
+
+@keyframes arrow3 {
+  0% {
+    fill: #ffcccc;
+  }
+  50% {
+    fill: #ffcccc;
+  }
+  80% {
+    fill: #a42b31;
+  }
+  100% {
+    fill: #ffcccc;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: #575757;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: #575757;
+  }
+}
+/*# sourceMappingURL=style.css.map */
