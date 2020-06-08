@@ -12,13 +12,15 @@ window.addEventListener("resize", () => {
 
 //animate on scroll
 const display = (e) => {
-  if(pageYOffset >= 500 && pageYOffset<=600){
+  if(pageYOffset >= 500){
       console.log("this works!")
       document.getElementById('about-animation').classList.add("scroll-animation")
+      document.getElementById('about-me-desription-container').classList.add("about-me-desription-container-animation")
   }
   else if(pageYOffset < 500){
     console.log("this works!")
     document.getElementById('about-animation').classList.remove("scroll-animation")
+    document.getElementById('about-me-desription-container').classList.remove("about-me-desription-container-animation")
 }
 }
 window.onscroll = display
