@@ -466,6 +466,13 @@ nav ul li a:hover {
 }
 
 #about-me .about-me-desription-container-animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-left: 19%;
   -webkit-transition: margin 1s, background 2s;
   transition: margin 1s, background 2s;
@@ -515,6 +522,18 @@ nav ul li a:hover {
 }
 
 #about-me .about-para-socialmedia-container ul li {
+  width: 90px;
+  padding: 10px;
+  list-style-type: none;
+  background: transparent;
+  color: #a42b31;
+  border: transparent solid 2px;
+  font-weight: 700;
+  -webkit-transition: background 1s, color 1s, border 1s;
+  transition: background 1s, color 1s, border 1s;
+}
+
+#about-me .about-para-socialmedia-container ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -525,18 +544,11 @@ nav ul li a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 90px;
-  padding: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  list-style-type: none;
-  background: transparent;
   color: #a42b31;
-  border: transparent solid 2px;
-  font-weight: 700;
-  -webkit-transition: background 1s, color 1s, border 1s;
-  transition: background 1s, color 1s, border 1s;
+  text-decoration: none;
 }
 
 #about-me .about-para-socialmedia-container ul li span img {
@@ -552,6 +564,121 @@ nav ul li a:hover {
   background: #f8f8f8;
   -webkit-transition: background 1s color 1s, border 1s;
   transition: background 1s color 1s, border 1s;
+}
+
+@media only screen and (max-width: 1615px) {
+  #about-me {
+    background: #15181a;
+    height: 200vh;
+  }
+  #about-me .who-ken {
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 2em;
+    color: #15181a;
+    width: 50%;
+    background: #a42b31;
+    margin: 1em;
+    margin-left: -1000px;
+    padding: 0.5em;
+    -webkit-transition: margin 1s;
+    transition: margin 1s;
+    text-align: right;
+  }
+  #about-me .scroll-animation {
+    margin: 1em 0em 1em 0%;
+    -webkit-transition: margin 1s;
+    transition: margin 1s;
+  }
+  #about-me .about-me-desription-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    background: transparent;
+    margin-left: 2000px;
+    -webkit-transition: margin 1s;
+    transition: margin 1s;
+  }
+  #about-me .about-me-desription-container-animation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: auto;
+    margin-left: 0%;
+    padding: 2em;
+    -webkit-transition: margin 1s, background 2s;
+    transition: margin 1s, background 2s;
+  }
+  #about-me .about-me-paragraph {
+    width: 100%;
+    height: auto;
+    margin-top: 1em;
+    padding: 0em 2em;
+    line-height: 1.5;
+  }
+  #about-me ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    color: #a42b31;
+    margin: 2em;
+    padding: 0em 2em;
+  }
+  #about-me ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90px;
+    padding: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style-type: none;
+    background: transparent;
+    color: #a42b31;
+    border: transparent solid 2px;
+    font-weight: 700;
+    -webkit-transition: background 1s, color 1s, border 1s;
+    transition: background 1s, color 1s, border 1s;
+  }
+  #about-me ul li span img {
+    height: 2em;
+    width: 2em;
+  }
 }
 
 @media only screen and (max-width: 850px) {
