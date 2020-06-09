@@ -41,14 +41,14 @@ body {
 }
 
 header {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     text-align: center;
 }
 
 .logo {
-    height: 65%;
-    width: auto;
+    height: auto;
+    width: 600px;
 }
 
 .splash-title {
@@ -226,7 +226,8 @@ header {
     
     .logo {
         margin-top: 2em;
-        height: 45%;
+        height: auto;
+        width: 75%;
     }
 
     .splash-title {
@@ -288,6 +289,9 @@ header {
 //---------------------------------------------------------------------
 // Main CSS:
 //---------------------------------------------------------------------
+//---------------------------------------------------------------------
+// About/Navigation CSS:
+//---------------------------------------------------------------------
 
 main{
     background: $dark-grey;
@@ -331,7 +335,6 @@ nav {
 
 #about-me {
     background: $dark-grey;
-    height: 200vh;
 
     .who-ken {
         font-family: $sub-text;
@@ -383,7 +386,7 @@ nav {
 
         .about-me-paragraph {
             width: 100%;
-            height: 400px;
+            height: auto;
             padding: 0em 2em;
             line-height: 1.5;
         }
@@ -392,17 +395,16 @@ nav {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content:space-between;
+            justify-content:space-around;
             align-items: center; 
-            height: 100px;
+            height: auto;
             color:$red;
-            padding:0em 2em;
+            // padding:0em 2em;
 
             li{
                
                 width: 90px;
                 padding: 10px;
-                
                 list-style-type:none;
                 background:transparent;
                 color: $red;
@@ -447,11 +449,10 @@ nav {
 //---------------------------------------------------------------------
 // Media Queries:
 //---------------------------------------------------------------------
-@media only screen and (max-width: 1615px) {
+@media only screen and (max-width: 1700px) {
 
     #about-me {
         background: $dark-grey;
-        height: 200vh;
     
         .who-ken {
             font-family: $sub-text;
@@ -490,6 +491,14 @@ nav {
             margin-left: 0%;
             padding: 2em;
             transition: margin 1s, background 2s;
+        }
+
+        .image-container{
+            img {
+                height: 600px;
+                width: auto;
+                margin: 0 auto;
+            }
         }
 
         .about-me-paragraph {
@@ -538,6 +547,20 @@ nav {
 
 }
 
+@media only screen and (max-width: 935px) {
+
+    #about-me {
+        background: $dark-grey;
+
+        .image-container{
+            img {
+                height: 450px;
+                width: auto;
+                margin: 0;
+            }
+        }
+    }
+}
 
 
 @media only screen and (max-width: 850px) {
@@ -566,6 +589,13 @@ nav {
                     background: transparent;
                     transition: color 0.75s , background 0.75s, border 0.75s;
                 }
+                span{
+
+                    img{
+                        height: 2em;
+                        width: 2em;
+                    }
+                }
                 a:hover{
                     color: $dark-grey;
                     border: solid $dark-grey 2px;
@@ -575,4 +605,232 @@ nav {
             }
         }
     } 
+
+}
+@media only screen and (max-width: 700px) {
+
+    #about-me {
+        .who-ken {
+            margin-bottom: 0;
+        }
+        .image-container{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            img {
+                height: 300px;
+                width: auto;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 415px) {
+
+    #about-me {
+        .who-ken {
+            margin-bottom: 0;
+        }
+        .image-container{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            img {
+                height: 200px;
+                width: auto;
+                margin: 0;
+            }
+        }
+    }
+}
+
+//---------------------------------------------------------------------
+// Portfolio CSS:
+//---------------------------------------------------------------------
+
+.page-division {
+    font-family: $prime-text;
+    background: $red;
+    text-align: center;
+    margin: 2em 0;
+    padding: 1em;
+
+
+    h2 {
+        font-size: 2.25rem;
+        font-weight: 400;
+    }
+}
+
+.portfolio-section-container {
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    .portfolio-card{
+        height: 400px;
+        width: 300px;
+        text-align: center;
+        padding: 1em;
+        margin: 1em 0;
+        background: transparent;
+        color: $white;
+        border: solid transparent 2px;
+        transition: border 1s, background 1s, color 1s;
+
+        .portfolio-item-img {
+            height: 225px;
+            width: 225px;
+            background: $white;
+            margin: 1em auto;
+
+            img{
+                height: 100%;
+                width: 100%;
+                border: solid $dark-grey 2px;
+                transition: border 1s;
+            }
+        }
+
+        h3 {
+            color: $light-red;
+            font-size: 1.25rem;
+            margin-bottom: 1em;
+            transition: color 1s;
+        }
+    }
+
+    .portfolio-card:hover {
+        background: white;
+        border: solid $red 2px;
+        color: $dark-grey;
+        cursor: pointer;
+        transition: border 1s, color 1s, background 1s;
+
+        img{
+            border: solid $red 2px;
+            transition: border 1s;
+        }
+
+        h3 {
+            color: $red;
+            transition: color 1s;
+        }
+    }
+
+}
+
+//---------------------------------------------------------------------
+// Portfolio CSS:
+//---------------------------------------------------------------------
+
+.contact-section-container {
+    display: flex;
+    flex-direction: column;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        min-width: 350px; 
+        height: auto;
+        background: transparent;
+        border: $red solid 2px;
+        margin: 0 auto 2em;;
+        padding: 1em;
+
+        label {
+            display: flex;
+            flex-direction: column;
+            font-family: $prime-text;
+            font-size: 1.15em;
+        }
+
+        input {
+            margin: 0.5em 0;
+            padding: 0.5em;
+            background: $light-grey;
+            border: $red solid 2px;
+            font-size: 1em;
+            font-family: $sub-text;
+        }
+
+        input:focus {
+            background: $white;
+        }
+
+        textarea {
+            height: 300px;
+            width: 100%;
+            background: $light-grey;
+            border: $red solid 2px;
+            font-size: 1em;
+            font-family: $sub-text;
+        }
+
+        textarea:focus {
+            background: $white;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            button {
+                width: 33.3%;
+                margin: 1em 0;
+                padding: 1em 0.5em;
+                background: transparent;
+                border: $red solid 2px;
+                color: $red;
+                font-family: $prime-text;
+                font-size: 1.15em;
+                font-weight: 700;
+                transition: background 1s, color 1s, border 1s;
+            }
+            button:hover{
+                background: $white;
+                color: $dark-grey;
+                transition: background 1s, color 1s;
+            }
+
+            button:focus{
+                background: $white;
+                color: $dark-grey;
+                transition: background 1s, color 1s;
+            }
+        }
+    }
+}
+
+//---------------------------------------------------------------------
+// Portfolio CSS:
+//---------------------------------------------------------------------
+
+footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: $light-grey;
+    background: $white;
+    padding: 1em;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        li{
+            text-decoration: none;
+            list-style: none;
+        }
+
+        li:first-child {
+            margin-right: 2em;
+        }
+    }
 }

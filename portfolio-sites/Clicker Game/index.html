@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 4 link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Local CSS Style Sheet Link-->
+    <link rel="stylesheet" href="./style.css">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zen Click</title>
+</head>
+
+<!--............... Body Content............... -->
+
+
+
+<body>
+  <div class="container-fluid">
+    <!--Page Title and Navigation Menu-->
+    <div class="row">
+      <div class="col"><h1>Wonder Click!!</h1></div>
+    </div>
+    <!--Main Content Area-->
+    <div class="row">
+      <div class="col-sm">
+        
+      </div>
+      <div class="col-sm">
+       <!--The Card containing the button and the text comments and click counter-->
+        <div class="card text-center">
+            <div class="card-header" id="countNumber">
+              <!--card-header InnerHTML (number od clicks-->
+              There have been no clicks.  The button is sad...
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Clickity Clackity</h5>
+              <p class="card-text">Click the button below and see what happens...You know you want to...it's RED!</p>
+              <a href="#" class="btn btn-danger" onclick="onClick()"><h3>Click Me</h3></a>
+            </div>
+            <div class="card-footer text-muted" id="updates">
+              <!--card-footer innerHTML (announcements)-->
+              What is the worst that could happen?
+            </div>
+          </div>
+      </div>
+      <div class="col-sm">
+        
+      </div>
+
+    </div>
+
+  </div>  
+
+
+
+
+
+
+    <!--Bootstrap JS links for JQuery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Local Java Script File Link-->
+    <script src="./script.js"></script>
+
+</body>
+</html>

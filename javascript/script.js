@@ -12,12 +12,12 @@ window.addEventListener("resize", () => {
 
 //animate on scroll
 const display = (e) => {
-  if(pageYOffset >= 500){
+  if(pageYOffset >= 450){
       console.log("this works!")
       document.getElementById('about-animation').classList.add("scroll-animation")
       document.getElementById('about-me-desription-container').classList.add("about-me-desription-container-animation")
   }
-  else if(pageYOffset < 500){
+  else if(pageYOffset < 450){
     console.log("this works!")
     document.getElementById('about-animation').classList.remove("scroll-animation")
     document.getElementById('about-me-desription-container').classList.remove("about-me-desription-container-animation")
@@ -25,14 +25,3 @@ const display = (e) => {
 }
 window.onscroll = display
 
-// function offset(el) {
-//   var rect = el.getBoundingClientRect(),
-//   scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-//   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//   return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-// }
-
-// // example use
-// var div = document.getElementById('about-animation');
-// var divOffset = offset(div);
-// console.log(divOffset.left, divOffset.top);
