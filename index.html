@@ -6,12 +6,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./scss/style.css">
-    <link rel="stylesheet" href="./scss/main.css">
     <title>Kenneth Schwoerke: Web Developer</title>
 </head>
 <body>
+  <div id="home"></div>
   <header>
-    <img class="logo" src="./svg/KS-Logo-01.svg"/>
+    <img class="logo" src="./svg/KS-Logo-01.svg" alt="Hexagon shaped KS-Logo with KS knocked out"/>
     <h1 id="splash-title" class="splash-title">Kenneth Schwoerke</h1>
     <p class="splash-sub-title" id="splash-sub-title">Web Designer and Developer</p>
     <div class="scroll-icon-container">
@@ -40,13 +40,14 @@
   <main>
     <nav>
       <ul>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">My Portfolio</a></li>
-        <li><a href="#">Contact Me</a></li>
+        <li><a href="#About">About Me</a></li>
+        <li><a href="#Portfolio">My Portfolio</a></li>
+        <li><a href="#Contact">Contact Me</a></li>
       </ul>
     </nav>
 
 <!-- About Me Section -->
+    <div id="About"></div>
     <section id="about-me">
       <h2 class="who-ken"id="about-animation">So...Who exactly am I?</h2>
 
@@ -59,13 +60,13 @@
             I am an artist and former counselor turned web developer with a passion for the user experience.  I spend a lot of my time researching current UI and UX design trends, and enjoy finding creative ways to apply these trends as well as classic design in my projects.  
             <br>
             <br>
-            While I am most passionate about the front end of web development with HTML, CSS, and Javascript. I am also familiar with working on the back end of projects specifically with Node.js and Express.js.  
+            While I am most passionate about the front end of web development with HTML, CSS, JavaScript and React. I am also familiar with working on the back end of projects specifically with Node.js and Express.js.  
             <br>
             <br>
-            When I am not coding or doing code related activities. I greatly enjoy spending time outside hiking or biking and time inside working on my latest art project, Warhammer diorama, reading, or playing video games.   
+            When I am not coding or doing code related activities. I greatly enjoy spending time outside hiking or biking and inside working on my latest art project, Warhammer diorama, reading, or playing video games.   
             <br>
             <br>
-            If you would like to know more about me, please follow the links below to my resume and social media pages.
+            If you would like to know more about me, please follow the links below to my <a href="./svg/Resume-Red-v2.pdf" target="_blank"><b>resum&eacute;</b></a> and social media pages.
           </p>
           <ul>
             <li>
@@ -112,88 +113,104 @@
       </div>
     </section>
 
+
 <!-- Portfolio Section -->
+<div id="Portfolio"></div>
 <div class="page-division">
-  <h2>My Portfolio</h2>
+  <h2 >My Portfolio</h2>
 </div>
     <section class="portfolio-section-container">
 
-      <article class="portfolio-card">
-        <div class="portfolio-item-img">
-          <img src="./portfolio-sites/Images/ArtFrog.jpg" alt="Art Frog Web Site ">
-        </div>
-        <div class="portfolio-item-info">
-          <h3 class="portfolio-item-title">ArtFrog Art Academy</h3>
-          <p class="portfolio-item-description">Website created for ArtFrog Art Academy for the 2019 Knowability AIR Rally. 
-          </p>
-        </div>
-      </article>
-
-      <article class="portfolio-card">
-        <div class="portfolio-item-img">
-          <img src="./portfolio-sites/Images/new-critter-site.jpg" alt="New Critter Studios Web Site ">
-        </div>
-        <div class="portfolio-item-info">
-          <h3 class="portfolio-item-title">New Critter Studios</h3>
-          <p class="portfolio-item-description">Full-Stack Website created for New Critter Art Studios Fine Art.</p>
-        </div>
-      </article>
-
-      <article class="portfolio-card">
-        <div class="portfolio-item-img">
-          <img src="./portfolio-sites/Images/TicTacToe.jpg" alt="Tic Tac Toe Game ">
-        </div>
-        <div class="portfolio-item-info">
-          <h3 class="portfolio-item-title">Tic Tac Toe Game</h3>
-          <p class="portfolio-item-description">Tic Tac Toe Game created using HTML, CSS, and Java Script.</p>
-        </div>
-      </article>
-
-      <article class="portfolio-card">
-        <div class="portfolio-item-img">
-          <img src="./portfolio-sites/Images/Click_Game.jpg" alt="Click Game">
-        </div>
-        <div class="portfolio-item-info">
-          <h3 class="portfolio-item-title">Wonder Click Game</h3>
-          <p class="portfolio-item-description">Click Game created using HTML, CSS, and Java Script.</p>
-        </div>
-      </article>
-
+      <a href="http://artfrog.org/" target="_blank">
+        <article class="portfolio-card">
+          <div class="portfolio-item-img">
+            <img src="./portfolio-sites/Images/ArtFrog.jpg" alt="Art Frog Web Site ">
+          </div>
+          <div class="portfolio-item-info">
+            <h3 class="portfolio-item-title">ArtFrog Art Academy</h3>
+            <p class="portfolio-item-description">Website created for ArtFrog Art Academy for the 2019 Knowability AIR Rally. 
+            </p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="https://agile-citadel-77839.herokuapp.com/" target="_blank">
+        <article class="portfolio-card">
+          <div class="portfolio-item-img">
+            <img src="./portfolio-sites/Images/new-critter-site.jpg" alt="New Critter Studios Web Site ">
+          </div>
+          <div class="portfolio-item-info">
+            <h3 class="portfolio-item-title">New Critter Studios</h3>
+            <p class="portfolio-item-description">Full-Stack Website created for New Critter Art Studios Fine Art.</p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="./portfolio-sites/ticTacToe-javaScript/ticTacToe.html" target="_blank">
+        <article class="portfolio-card">
+          <div class="portfolio-item-img">
+            <img src="./portfolio-sites/Images/TicTacToe.jpg" alt="Tic Tac Toe Game ">
+          </div>
+          <div class="portfolio-item-info">
+            <h3 class="portfolio-item-title">Tic Tac Toe Game</h3>
+            <p class="portfolio-item-description">Tic Tac Toe Game created using HTML, CSS, and Java Script.</p>
+          </div>
+        </article>
+      </a>
+      
+      <a href="./portfolio-sites/Clicker Game/index.html" target="_blank">
+        <article class="portfolio-card">
+          <div class="portfolio-item-img">
+            <img src="./portfolio-sites/Images/Click_Game.jpg" alt="Click Game">
+          </div>
+          <div class="portfolio-item-info">
+            <h3 class="portfolio-item-title">Wonder Click Game</h3>
+            <p class="portfolio-item-description">Click Game created using HTML, CSS, and Java Script.</p>
+          </div>
+        </article>
+      </a>
     </section>
 
+
     <section class="contact-section-container">
+      <div id="Contact"></div>
       <div class="page-division">
-        <h2>Contact Me</h2>
+        <h2 >Contact Me</h2>
     </div>
 
       <form action="https://formspree.io/maypjybp" method="POST" target="_blank">
+        <input type="hidden" name="_next" value="./thankyou.html"/>
         <label>
         Your Email:
-          <input type="text" name="_replyto">
+          <input type="text" name="_replyto" placeholder="your.email@email.com">
         </label>
         <label>
         Your Subject:
-          <input type="text" name="subject">
+          <input type="text" name="subject" placeholder="Your subject line...">
         </label>
         <label>
           Your Message:
-            <textarea name="message"></textarea>
+            <textarea name="message" placeholder="Your message..."></textarea>
         </label>
-
-        <input type="hidden" name="_next" value="https://kjschwoerke.com/"/>
         <div class="button-container">
           <button type="submit">Send Email</button>
         </div>
         
       </form>
-
+    
     </section>
 
+
   </main>
+
+  <a id="home-link" class="hl-invisible" href="#home">
+    Return to Top
+  </a>
+
   <hr>
   <footer>
     <p>
-      Kenneth Schwoerke 2020
+      Site Design: Kenneth Schwoerke, 2020
     </p>
     <ul>
       <li>

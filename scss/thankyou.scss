@@ -1,0 +1,102 @@
+// Create color variables for the site:
+//---------------------------------------------------------------------
+$red: #a42b31;
+$light-red:#cc6666;
+$pink: #ffcccc;
+$white: #f8f8f8;
+$light-grey: #575757;
+$dark-grey: #15181a;
+//---------------------------------------------------------------------
+//Variables for fonts:
+$prime-text:'Montserrat', sans-serif;
+$sub-text:'Roboto Slab', serif;
+//---------------------------------------------------------------------
+
+.thank-body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    height: 100vh;
+    width: 100%;
+    color: $dark-grey;
+    text-align: center;
+}
+
+.thank-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.thank-title {
+    position: fixed;
+    top: 55%;
+    width: 0px;
+    overflow: hidden;
+    margin: 0px auto;
+    color: $white;
+    font-size: 2.5rem;
+    font-family: $prime-text;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+        thank-type 2.5s steps(30, end) 0s forwards, 
+        thank-cursor 0.5s step-end 10;
+    border-right: 5px solid transparent;
+}
+
+.return{
+    color: transparent;
+    font-family: $sub-text;
+    animation: return 2s linear 3s forwards;
+}
+
+@keyframes return {
+    from {
+        color: transparent;
+    }
+    to {
+        color: $white;
+    }
+}
+
+@keyframes thank-type {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 625px;
+    }
+}
+
+@keyframes thank-cursor {
+    from, to {
+        border-right: solid 5px transparent;
+    }
+    50% {
+        border-right: solid 5px $white;
+    }
+}
+
+//---------------------------------------------------------------------
+// Media Queries:
+//---------------------------------------------------------------------
+
+@media only screen and (max-width: 650px) {
+    .thank-title {
+        font-size: 1.25rem;
+    }
+
+    @keyframes thank-type {
+        from {
+            width: 0px;
+        }
+        to {
+            width: 315px;
+        }
+    }
+}

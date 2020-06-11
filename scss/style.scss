@@ -18,6 +18,34 @@ $sub-text:'Roboto Slab', serif;
     box-sizing: border-box;
 }
 
+.hl-invisible{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 1em auto 0;
+    padding: 1em;
+    color: transparent;
+    background: transparent;
+    text-align: center;
+    transition: color 0.3s, background 0.3s;
+}
+
+.hl-visible{
+    color: $white;
+    background: #94949483;
+    transition: color 0.3s, background 0.3s;
+    text-decoration: none;
+}
+
+.hl-visible:hover{
+    text-decoration: underline;
+}
+
+.hl-visible:focus{
+    text-decoration: underline;
+}
+
+
 // Stop Animations on window resize
 .resize-animation-stopper * {
     animation: none !important;
@@ -26,6 +54,7 @@ $sub-text:'Roboto Slab', serif;
 
 body {
     margin: 0;
+    margin-bottom: 3.5em;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
@@ -328,6 +357,13 @@ nav {
                 background: $light-red;
                 transition: color 0.75s , background 0.75s, border 0.75s;
             }
+
+            a:focus{
+                color: $dark-grey;
+                border: solid $dark-grey 2px;
+                background: $light-red;
+                transition: color 0.75s , background 0.75s, border 0.75s;
+            }
         }
     }
 }
@@ -389,6 +425,25 @@ nav {
             height: auto;
             padding: 0em 2em;
             line-height: 1.5;
+
+            a {
+                text-decoration: none;
+                font-style: none;
+                color: $red;
+                margin: 0;
+                border-bottom: solid 2px transparent;
+                
+            }
+            a:hover {
+                margin: 0;
+                border-bottom: solid 2px $light-red;
+                
+            }
+            a:focus {
+                margin: 0; 
+                border-bottom: solid 2px $light-red;
+                
+            }
         }
 
         ul{
@@ -399,10 +454,9 @@ nav {
             align-items: center; 
             height: auto;
             color:$red;
-            // padding:0em 2em;
+            padding:0em 2em;
 
             li{
-               
                 width: 90px;
                 padding: 10px;
                 list-style-type:none;
@@ -417,8 +471,33 @@ nav {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    width: 90px;
+                    height: 103px;
+                    padding: 10px;
                     color: $red;
                     text-decoration: none;
+                }
+
+                a:hover{
+                    width: 90px;
+                    padding: 10px;
+                    color: $red;
+                    cursor: pointer;
+                    font-weight: 700;
+                    border: $red solid 2px;
+                    background: $white;
+                    transition: background 1s color 1s, border 1s;
+                }
+
+                a:focus{
+                    width: 90px;
+                    padding: 10px;
+                    color: $red;
+                    cursor: pointer;
+                    font-weight: 700;
+                    border: $red solid 2px;
+                    background: $white;
+                    transition: background 1s color 1s, border 1s;
                 }
 
                 span{
@@ -429,14 +508,7 @@ nav {
                     }
                 }
             }
-            li:hover{
-                color: $red;
-                cursor: pointer;
-                font-weight: 700;
-                border: $red solid 2px;
-                background: $white;
-                transition: background 1s color 1s, border 1s;
-            }
+
         }
     }
     
@@ -669,62 +741,94 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    
-    .portfolio-card{
-        height: 400px;
-        width: 300px;
-        text-align: center;
-        padding: 1em;
+
+    a{
+        text-decoration: none;
+        font-style: none;
         margin: 1em 0;
-        background: transparent;
-        color: $white;
         border: solid transparent 2px;
-        transition: border 1s, background 1s, color 1s;
-
-        .portfolio-item-img {
-            height: 225px;
-            width: 225px;
-            background: $white;
-            margin: 1em auto;
-
-            img{
-                height: 100%;
-                width: 100%;
-                border: solid $dark-grey 2px;
-                transition: border 1s;
-            }
-        }
-
-        h3 {
-            color: $light-red;
-            font-size: 1.25rem;
-            margin-bottom: 1em;
-            transition: color 1s;
-        }
-    }
-
-    .portfolio-card:hover {
-        background: white;
-        border: solid $red 2px;
-        color: $dark-grey;
-        cursor: pointer;
         transition: border 1s, color 1s, background 1s;
 
-        img{
+        .portfolio-card{
+            height: 400px;
+            width: 300px;
+            text-align: center;
+            padding: 1em;
+            margin: 0;
+            background: transparent;
+            color: $white;
+            border: solid transparent 2px;
+            transition: border 1s, background 1s, color 1s;
+    
+            .portfolio-item-img {
+                height: 225px;
+                width: 225px;
+                background: $white;
+                margin: 1em auto;
+    
+                img{
+                    height: 100%;
+                    width: 100%;
+                    border: solid $dark-grey 2px;
+                    transition: border 1s;
+                }
+            }
+    
+            h3 {
+                color: $light-red;
+                font-size: 1.25rem;
+                margin-bottom: 1em;
+                transition: color 1s;
+            }
+        }
+    
+        .portfolio-card:hover {
+            background: white;
             border: solid $red 2px;
-            transition: border 1s;
+            color: $dark-grey;
+            cursor: pointer;
+            transition: border 1s, color 1s, background 1s;
+    
+            img{
+                border: solid $red 2px;
+                transition: border 1s;
+            }
+    
+            h3 {
+                color: $red;
+                transition: color 1s;
+            }
         }
-
-        h3 {
-            color: $red;
-            transition: color 1s;
-        }
+    
     }
 
+    a:focus{
+        outline: solid $pink 3px;
+
+        .portfolio-card{
+            background: white;
+            border: solid $red 2px;
+            color: $dark-grey;
+            cursor: pointer;
+            transition: border 1s, color 1s, background 1s;
+    
+            img{
+                border: solid $red 2px;
+                transition: border 1s;
+            }
+    
+            h3 {
+                color: $red;
+                transition: color 1s;
+            }
+        }
+    }
+    
+   
 }
 
 //---------------------------------------------------------------------
-// Portfolio CSS:
+// Contact CSS:
 //---------------------------------------------------------------------
 
 .contact-section-container {
@@ -752,7 +856,8 @@ nav {
         input {
             margin: 0.5em 0;
             padding: 0.5em;
-            background: $light-grey;
+            background: $dark-grey;
+            color: $white;
             border: $red solid 2px;
             font-size: 1em;
             font-family: $sub-text;
@@ -760,19 +865,23 @@ nav {
 
         input:focus {
             background: $white;
+            color: $dark-grey;
         }
 
         textarea {
             height: 300px;
             width: 100%;
-            background: $light-grey;
+            background: $dark-grey;
+            color: $white;
             border: $red solid 2px;
             font-size: 1em;
             font-family: $sub-text;
+            padding: 0.5em;
         }
 
         textarea:focus {
             background: $white;
+            color:$dark-grey;
         }
 
         .button-container {
@@ -784,6 +893,7 @@ nav {
                 padding: 1em 0.5em;
                 background: transparent;
                 border: $red solid 2px;
+                outline: transparent solid 3px;
                 color: $red;
                 font-family: $prime-text;
                 font-size: 1.15em;
@@ -791,22 +901,23 @@ nav {
                 transition: background 1s, color 1s, border 1s;
             }
             button:hover{
-                background: $white;
+                background: $light-red;
                 color: $dark-grey;
                 transition: background 1s, color 1s;
             }
 
             button:focus{
-                background: $white;
+                background: $light-red;
+                outline: $white solid 3px;
                 color: $dark-grey;
-                transition: background 1s, color 1s;
+                transition: background 1s, color 1s, outline 1s;
             }
         }
     }
 }
 
 //---------------------------------------------------------------------
-// Portfolio CSS:
+// Footer CSS:
 //---------------------------------------------------------------------
 
 footer {
@@ -815,8 +926,9 @@ footer {
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: $light-grey;
-    background: $white;
+    font-family: $sub-text;
+    color: $dark-grey;
+    background: $light-grey;
     padding: 1em;
 
     ul {
@@ -831,6 +943,29 @@ footer {
 
         li:first-child {
             margin-right: 2em;
+            margin-left: 1em;
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 1em;
+
+            li:first-child {
+                margin-right: 0;
+                margin-left: 0;
+            }
+
         }
     }
 }

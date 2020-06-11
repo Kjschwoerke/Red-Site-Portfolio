@@ -16,12 +16,21 @@ const display = (e) => {
       console.log("this works!")
       document.getElementById('about-animation').classList.add("scroll-animation")
       document.getElementById('about-me-desription-container').classList.add("about-me-desription-container-animation")
+      document.getElementById('home-link').classList.add("hl-visible")
   }
   else if(pageYOffset < 450){
     console.log("this works!")
     document.getElementById('about-animation').classList.remove("scroll-animation")
     document.getElementById('about-me-desription-container').classList.remove("about-me-desription-container-animation")
+    document.getElementById('home-link').classList.remove("hl-visible")
 }
+
+  if(pageYOffset >= 700){
+    document.getElementById('home-link').classList.add("hl-visible")
+  }
+  else if(pageYOffset < 700){
+    document.getElementById('home-link').classList.remove("hl-visible")
+  }
 }
 window.onscroll = display
 
