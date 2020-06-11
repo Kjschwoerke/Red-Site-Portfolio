@@ -340,10 +340,13 @@ nav {
         li{
             list-style: none;
             margin: 0 0.5em;
+            text-align: center;
             
             a{
                 text-decoration: none;
+                text-align: center;
                 font-style: none;
+                white-space: nowrap;
                 font-weight: 400;
                 padding: .25em;
                 border: solid transparent 2px;
@@ -371,6 +374,7 @@ nav {
 
 #about-me {
     background: $dark-grey;
+    overflow: hidden;
 
     .who-ken {
         font-family: $sub-text;
@@ -715,6 +719,10 @@ nav {
             }
         }
     }
+
+    .about-me-paragraph {
+        text-align: center;
+    }
 }
 
 //---------------------------------------------------------------------
@@ -901,14 +909,14 @@ nav {
                 transition: background 1s, color 1s, border 1s;
             }
             button:hover{
-                background: $light-red;
+                background: $white;
                 color: $dark-grey;
                 transition: background 1s, color 1s;
             }
 
             button:focus{
-                background: $light-red;
-                outline: $white solid 3px;
+                background: $white;
+                outline: $pink solid 3px;
                 color: $dark-grey;
                 transition: background 1s, color 1s, outline 1s;
             }

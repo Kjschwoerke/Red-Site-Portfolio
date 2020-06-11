@@ -427,11 +427,14 @@ nav ul {
 nav ul li {
   list-style: none;
   margin: 0 0.5em;
+  text-align: center;
 }
 
 nav ul li a {
   text-decoration: none;
+  text-align: center;
   font-style: none;
+  white-space: nowrap;
   font-weight: 400;
   padding: .25em;
   border: solid transparent 2px;
@@ -459,6 +462,7 @@ nav ul li a:focus {
 
 #about-me {
   background: #15181a;
+  overflow: hidden;
 }
 
 #about-me .who-ken {
@@ -854,6 +858,9 @@ nav ul li a:focus {
     width: auto;
     margin: 0;
   }
+  .about-me-paragraph {
+    text-align: center;
+  }
 }
 
 .page-division {
@@ -1070,15 +1077,15 @@ nav ul li a:focus {
 }
 
 .contact-section-container form .button-container button:hover {
-  background: #cc6666;
+  background: #f8f8f8;
   color: #15181a;
   -webkit-transition: background 1s, color 1s;
   transition: background 1s, color 1s;
 }
 
 .contact-section-container form .button-container button:focus {
-  background: #cc6666;
-  outline: #f8f8f8 solid 3px;
+  background: #f8f8f8;
+  outline: #ffcccc solid 3px;
   color: #15181a;
   -webkit-transition: background 1s, color 1s, outline 1s;
   transition: background 1s, color 1s, outline 1s;
