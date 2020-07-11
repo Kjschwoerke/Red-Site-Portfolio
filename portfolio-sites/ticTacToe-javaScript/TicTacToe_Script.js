@@ -68,7 +68,7 @@ function nonWinner() {
 //Set all Non-Winner Conditions
 
 if(box1.innerHTML !== "" && box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML)
-selectNonWinnerBoxes(box4,box5,box6,box6,box8,box9);
+selectNonWinnerBoxes(box4,box5,box6,box7,box8,box9);
     
 if (box4.innerHTML !== "" && box4.innerHTML === box5.innerHTML && box4.innerHTML === box6.innerHTML)
 selectNonWinnerBoxes(box1,box2,box3,box7,box8,box9);
@@ -77,7 +77,7 @@ if (box7.innerHTML !== "" && box7.innerHTML === box8.innerHTML && box7.innerHTML
 selectNonWinnerBoxes(box1,box2,box3,box4,box5,box6);
 
 if (box1.innerHTML !== "" && box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML)
-selectNonWinnerBoxes(box2,box3,box5,box8,box9);
+selectNonWinnerBoxes(box2,box3,box5,box6,box8,box9);
 
 if (box2.innerHTML !== "" && box2.innerHTML === box5.innerHTML && box2.innerHTML === box8.innerHTML)
 selectNonWinnerBoxes(box1,box3,box4,box6,box7,box9);
