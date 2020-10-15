@@ -1021,8 +1021,8 @@ nav ul li a:focus {
 .contact-section-container form input {
   margin: 0.5em 0;
   padding: 0.5em;
-  background: #15181a;
-  color: #f8f8f8;
+  background: #575757;
+  color: #15181a;
   border: #a42b31 solid 2px;
   font-size: 1em;
   font-family: "Roboto Slab", serif;
@@ -1036,8 +1036,8 @@ nav ul li a:focus {
 .contact-section-container form textarea {
   height: 300px;
   width: 100%;
-  background: #15181a;
-  color: #f8f8f8;
+  background: #575757;
+  color: #15181a;
   border: #a42b31 solid 2px;
   font-size: 1em;
   font-family: "Roboto Slab", serif;
@@ -1074,18 +1074,20 @@ nav ul li a:focus {
 }
 
 .contact-section-container form .button-container button:hover {
-  background: #f8f8f8;
-  color: #15181a;
-  -webkit-transition: background 1s, color 1s;
-  transition: background 1s, color 1s;
+  background: #a42b31;
+  color: #f8f8f8;
+  border: #f8f8f8 solid 2px;
+  -webkit-transition: background 1s, color 1s, border 1s;
+  transition: background 1s, color 1s, border 1s;
 }
 
 .contact-section-container form .button-container button:focus {
-  background: #f8f8f8;
+  background: #a42b31;
   outline: #ffcccc solid 3px;
-  color: #15181a;
-  -webkit-transition: background 1s, color 1s, outline 1s;
-  transition: background 1s, color 1s, outline 1s;
+  color: #f8f8f8;
+  border: #f8f8f8 solid 2px;
+  -webkit-transition: background 1s, color 1s, outline 1s, border 1s;
+  transition: background 1s, color 1s, outline 1s, border 1s;
 }
 
 footer {

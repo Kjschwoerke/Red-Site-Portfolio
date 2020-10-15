@@ -869,8 +869,8 @@ nav {
         input {
             margin: 0.5em 0;
             padding: 0.5em;
-            background: $dark-grey;
-            color: $white;
+            background: $light-grey;
+            color: $dark-grey;
             border: $red solid 2px;
             font-size: 1em;
             font-family: $sub-text;
@@ -884,8 +884,8 @@ nav {
         textarea {
             height: 300px;
             width: 100%;
-            background: $dark-grey;
-            color: $white;
+            background: $light-grey;
+            color: $dark-grey;
             border: $red solid 2px;
             font-size: 1em;
             font-family: $sub-text;
@@ -914,16 +914,18 @@ nav {
                 transition: background 1s, color 1s, border 1s;
             }
             button:hover{
-                background: $white;
-                color: $dark-grey;
-                transition: background 1s, color 1s;
+                background: $red;
+                color: $white;
+                border: $white solid 2px;
+                transition: background 1s, color 1s, border 1s;
             }
 
             button:focus{
-                background: $white;
+                background: $red;
                 outline: $pink solid 3px;
-                color: $dark-grey;
-                transition: background 1s, color 1s, outline 1s;
+                color: $white;
+                border: $white solid 2px;
+                transition: background 1s, color 1s, outline 1s, border 1s;
             }
         }
     }
