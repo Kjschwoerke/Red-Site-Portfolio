@@ -972,7 +972,8 @@ nav ul li a:focus {
   transition: color 1s;
 }
 
-.portfolio-section-container .note {
+.note-container .note {
+  padding: 1em;
   text-align: center;
   font-family: "Roboto Slab", serif;
   color: #575757;

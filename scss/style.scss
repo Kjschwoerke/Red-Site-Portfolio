@@ -831,13 +831,17 @@ nav {
             }
         }
     }
-    
-   .note {
-       text-align: center;
-       font-family: $sub-text;
-       color: $light-grey;
-       margin-top: 2em;
-   }
+   
+}
+
+.note-container {
+    .note {
+        padding: 1em;
+        text-align: center;
+        font-family: $sub-text;
+        color: $light-grey;
+        margin-top: 2em;
+    }
 }
 
 //---------------------------------------------------------------------
