@@ -972,7 +972,7 @@ nav ul li a:focus {
   transition: color 1s;
 }
 
-.note-container .note {
+.note {
   padding: 1em;
   text-align: center;
   font-family: "Roboto Slab", serif;
