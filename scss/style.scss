@@ -61,12 +61,12 @@ body {
     line-height: 1.5;
     color: $white;
     background: $dark-grey;
-    background: #15181a; /* Old browsers */
-    background: -moz-linear-gradient(0deg, #15181a 0%, #070707 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(0deg, #15181a 0%,#070707 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(0deg, #15181a 0%,#070707 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15181a', endColorstr='#070707',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    font-family: $prime-text;
+    // background: #15181a; /* Old browsers */
+    // background: -moz-linear-gradient(0deg, #15181a 0%, #070707 100%); /* FF3.6-15 */
+    // background: -webkit-linear-gradient(0deg, #15181a 0%,#070707 100%); /* Chrome10-25,Safari5.1-6 */
+    // background: linear-gradient(0deg, #15181a 0%,#070707 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15181a', endColorstr='#070707',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    // font-family: $prime-text;
 }
 
 header {
